@@ -24,6 +24,10 @@ An updated lidar-initial odometry package, [LIO-SAM](https://github.com/TixiaoSh
   cmake ..
   sudo make install
   ```
+  %%error:
+  error while loading shared libraries: libmetis.so
+  ->sudo apt-get install libparmetis-dev
+
 
 ## Compile
 
