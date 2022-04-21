@@ -57,15 +57,23 @@ extern const string imuTopic = "/imu/data";
 extern const string fileDirectory = "/tmp/";
 
 // Using velodyne cloud "ring" channel for image projection (other lidar may have different name for this channel, change "PointXYZIR" below)
-extern const bool useCloudRing = true; // if true, ang_res_y and ang_bottom are not used
+extern const bool useCloudRing = false; // if true, ang_res_y and ang_bottom are not used
 
-// VLP-16
-extern const int N_SCAN = 16;
-extern const int Horizon_SCAN = 1800;
-extern const float ang_res_x = 0.2;
-extern const float ang_res_y = 2.0;
-extern const float ang_bottom = 15.0+0.1;
-extern const int groundScanInd = 7;
+// // VLP-16
+// extern const int N_SCAN = 16;
+// extern const int Horizon_SCAN = 1800;
+// extern const float ang_res_x = 0.2;
+// extern const float ang_res_y = 2.0;
+// extern const float ang_bottom = 15.0+0.1;
+// extern const int groundScanInd = 7;
+
+// RoboSense-80
+extern const int N_SCAN = 80;
+extern const int Horizon_SCAN = 1800;//每线1800个点的数据
+extern const float ang_res_x = 0.2;//水平上每条线间隔0.2°
+extern const float ang_res_y = 2.0;//竖直方向上每条线间隔2°
+extern const float ang_bottom = 25.0;//竖直方向上起始角度是负角度，与水平方向相差25°
+extern const int groundScanInd = 10;//以多少个扫描圈来表示地面
 
 // HDL-32E
 // extern const int N_SCAN = 32;
